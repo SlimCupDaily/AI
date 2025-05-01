@@ -4,502 +4,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domínio da IA: R$5k em 7 Dias (Método Comprovado)</title>
+    <title>Domínio da IA: R$5k em 7 Dias | Guia Prático</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
-            --accent: #10b981;
-            --dark: #1f2937;
-            --light: #f9fafb;
-        }
-        
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
         }
-        
+
         .container {
-            max-width: 1140px;
+            max-width: 800px;
+            margin-top: 30px;
         }
-        
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            position: relative;
+
+        .jumbotron {
+            background: linear-gradient(135deg, #0062cc, #007bff);
+            color: #fff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero-pattern {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.05;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .btn-accent {
-            background-color: var(--accent);
-            border-color: var(--accent);
-            color: white;
-            font-weight: 600;
-            padding: 12px 24px;
-            border-radius: 8px;
+
+        .btn-primary {
+            background-color: #ff5722;
+            border-color: #ff5722;
+            font-weight: bold;
+            padding: 12px 30px;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
-        
-        .btn-accent:hover {
-            background-color: #0d9488;
+
+        .btn-primary:hover {
+            background-color: #e64a19;
+            border-color: #e64a19;
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            color: white;
         }
-        
-        .feature-card {
-            border: none;
-            border-radius: 12px;
-            background: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s ease;
-            height: 100%;
-            padding: 24px;
+
+        .feature-item {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
         }
-        
-        .feature-card:hover {
+
+        .feature-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
-        .feature-icon {
+
+        .price {
             font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 16px;
+            font-weight: bold;
+            color: #ff5722;
+            margin: 15px 0;
         }
-        
+
         .price-tag {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--accent);
-            margin: 20px 0;
-        }
-        
-        .original-price {
-            text-decoration: line-through;
-            opacity: 0.7;
-            font-size: 1.5rem;
-        }
-        
-        .discount-badge {
-            background-color: #ef4444;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-left: 10px;
-        }
-        
-        .ebook-cover {
-            width: 100%;
-            max-width: 280px;
-            border-radius: 8px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            border: 4px solid white;
-            transition: all 0.3s ease;
-        }
-        
-        .ebook-cover:hover {
-            transform: scale(1.05);
-        }
-        
-        .testimonial-card {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        
-        .testimonial-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent);
-        }
-        
-        .guarantee-badge {
-            background-color: var(--accent);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            display: inline-flex;
-            align-items: center;
-            font-weight: 600;
-        }
-        
-        .faq-item {
-            margin-bottom: 16px;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 16px;
-        }
-        
-        .faq-question {
-            font-weight: 600;
-            color: var(--primary);
-            cursor: pointer;
-        }
-        
-        .countdown {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent);
-        }
-        
-        .section-title {
             position: relative;
             display: inline-block;
-            margin-bottom: 40px;
-            font-weight: 700;
         }
-        
-        .section-title:after {
-            content: '';
+
+        .price-tag .original-price {
             position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60%;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
+            top: -20px;
+            right: 0;
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: line-through;
+            opacity: 0.8;
         }
-        
-        @media (max-width: 768px) {
-            .hero-section {
-                text-align: center;
-            }
-            
-            .price-tag {
-                font-size: 2rem;
-            }
+
+        .ebook-cover {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .ebook-cover:hover {
+            transform: scale(1.03);
+        }
+
+        .testimonial {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .countdown {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .guarantee-icon {
+            font-size: 40px;
+            color: #28a745;
+            margin-right: 15px;
+        }
+
+        .chapter-preview {
+            background-color: #f1f8ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .badge-new {
+            background-color: #ff5722;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <div class="container py-5">
-        <!-- Seção Hero -->
-        <section class="hero-section mb-5 p-4 p-md-5">
-            <div class="hero-pattern"></div>
-            <div class="hero-content row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <span class="badge badge-light mb-3" style="font-size: 1rem; font-weight: 600;">LANÇAMENTO EXCLUSIVO</span>
-                    <h1 class="display-4 font-weight-bold mb-3">Domínio da IA: R$5k em 7 Dias</h1>
-                    <p class="lead mb-4">O método passo a passo para lucrar com Inteligência Artificial sem investimento inicial e sem conhecimentos técnicos</p>
-                    
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="price-tag">R$47,99</div>
-                        <div class="ml-3">
-                            <div class="original-price">De R$197,00</div>
-                            <span class="discount-badge">70% OFF</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <div class="guarantee-badge">
-                            <i class="fas fa-shield-alt mr-2"></i>
-                            Garantia de 7 dias ou seu dinheiro de volta
-                        </div>
-                    </div>
-                    
-                    <a href="https://pay.kiwify.com.br/Sr9Ij0X" class="btn btn-accent btn-lg mb-3">
-                        <i class="fas fa-arrow-right mr-2"></i> QUERO MEU ACESSO IMEDIATO
-                    </a>
-                    
-                    <div class="d-flex align-items-center text-light" style="opacity: 0.9;">
-                        <i class="fas fa-lock mr-2"></i>
-                        <small>Pagamento 100% seguro via Kiwify</small>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="https://i.imgur.com/bF1EIRi.png" alt="Capa do eBook Domínio da IA" class="ebook-cover">
-                </div>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <span class="badge badge-warning p-2 mb-3">GUIA PRÁTICO</span>
+            <h1>Domínio da IA: R$5k em 7 Dias Sem Investimento Inicial</h1>
+            <p class="lead">Aprenda a lucrar com Inteligência Artificial em tempo recorde, sem precisar investir nada!</p>
+            <img src="https://i.imgur.com/bF1EIRi.png" alt="Capa do eBook" class="ebook-cover">
+            <div class="countdown">
+                <i class="fas fa-clock"></i> Oferta por tempo limitado! Acesso imediato após a compra.
             </div>
-        </section>
-        
-        <!-- Contador de Oferta -->
-        <section class="text-center mb-5 p-4 bg-white rounded-lg shadow-sm">
-            <h4 class="font-weight-bold mb-3">OFERTA POR TEMPO LIMITADO!</h4>
-            <div class="countdown mb-3" id="countdown">05:23:47:12</div>
-            <p class="text-muted">Preço sobe em breve! Garanta seu acesso agora pelo valor promocional.</p>
-        </section>
-        
-        <!-- Seção Benefícios -->
-        <section class="mb-5">
-            <h2 class="section-title">O que você vai aprender</h2>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h4>Domine as ferramentas de IA</h4>
-                        <p>Aprenda a usar as melhores ferramentas gratuitas de IA que estão revolucionando o mercado digital.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4>Estratégias comprovadas</h4>
-                        <p>Métodos testados que já ajudaram mais de 500 alunos a gerar renda com IA no Brasil.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-money-bill-wave"></i>
-                        </div>
-                        <h4>Sem investimento inicial</h4>
-                        <p>Tudo que você precisa são 2-3 horas por dia e acesso à internet. Zero custos para começar.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h4>Resultados rápidos</h4>
-                        <p>Nosso método foi projetado para você ver os primeiros resultados em menos de 72 horas.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4>Comunidade exclusiva</h4>
-                        <p>Acesso a um grupo privado com outros alunos e suporte direto dos especialistas.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-gift"></i>
-                        </div>
-                        <h4>Bônus valiosos</h4>
-                        <p>Receba templates, scripts e checklists prontos para implementação imediata.</p>
-                    </div>
-                </div>
+            <div class="price-tag">
+                <span class="original-price">R$97,00</span>
+                <p class="price">Apenas R$47,99</p>
             </div>
-        </section>
-        
-        <!-- Seção Depoimentos -->
-        <section class="mb-5">
-            <h2 class="section-title">Quem já comprou recomenda</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Depoimento" class="testimonial-avatar mr-3">
-                            <div>
-                                <h5 class="mb-0">Ana Carolina</h5>
-                                <small class="text-muted">Empreendedora Digital</small>
-                            </div>
-                        </div>
-                        <div class="rating mb-2 text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"Em 5 dias já tinha feito R$3,200! O método é tão simples que qualquer pessoa pode seguir. Recomendo demais!"</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Depoimento" class="testimonial-avatar mr-3">
-                            <div>
-                                <h5 class="mb-0">Ricardo Almeida</h5>
-                                <small class="text-muted">Estudante</small>
-                            </div>
-                        </div>
-                        <div class="rating mb-2 text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"Estava desempregado quando comprei o curso. Em uma semana já tinha clientes fixos. Hoje é minha principal fonte de renda."</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Depoimento" class="testimonial-avatar mr-3">
-                            <div>
-                                <h5 class="mb-0">Fernanda Souza</h5>
-                                <small class="text-muted">Dona de Casa</small>
-                            </div>
-                        </div>
-                        <div class="rating mb-2 text-warning">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <p>"Nunca imaginei que conseguiria ganhar dinheiro online. Com o passo a passo do curso foi muito mais fácil do que pensei!"</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Seção Conteúdo -->
-        <section class="mb-5 bg-white p-5 rounded-lg shadow-sm">
-            <h2 class="section-title">O que você vai receber</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Módulo 1:</strong> Fundamentos da IA para negócios</li>
-                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Módulo 2:</strong> Configuração do seu sistema sem custos</li>
-                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Módulo 3:</strong> Criação de produtos digitais com IA</li>
-                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Módulo 4:</strong> Atração de clientes sem anúncios pagos</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Módulo 5:</strong> Processos de venda automatizados</li>
-                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Módulo 6:</strong> Escalando para R$10k/mês</li>
-                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Bônus 1:</strong> Templates de vendas prontos</li>
-                        <li class="mb-3"><i class="fas fa-check-circle text-success mr-2"></i> <strong>Bônus 2:</strong> Acesso à comunidade VIP</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Seção Garantia -->
-        <section class="mb-5 text-center p-5 rounded-lg" style="background-color: #f0fdf4;">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <img src="https://i.imgur.com/JzqR5NK.png" alt="Garantia" style="max-width: 150px;" class="mb-4">
-                    <h3 class="font-weight-bold mb-3">Garantia Incondicional de 7 Dias</h3>
-                    <p class="lead mb-4">Se em 7 dias você não estiver satisfeito(a) com o conteúdo, devolvemos 100% do seu dinheiro sem questionamentos. Você não tem absolutamente nada a perder!</p>
-                    <a href="https://pay.kiwify.com.br/Sr9Ij0X" class="btn btn-accent btn-lg">
-                        <i class="fas fa-arrow-right mr-2"></i> QUERO GARANTIR MEU ACESSO
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Seção FAQ -->
-        <section class="mb-5">
-            <h2 class="section-title">Perguntas Frequentes</h2>
-            <div class="faq-item">
-                <div class="faq-question" data-toggle="collapse" data-target="#faq1">
-                    <i class="fas fa-question-circle mr-2"></i> Preciso ter conhecimento técnico para seguir o método?
-                </div>
-                <div id="faq1" class="collapse show mt-2">
-                    Não! O método foi desenvolvido para iniciantes absolutos. Tudo é explicado passo a passo, desde a configuração até as primeiras vendas.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" data-toggle="collapse" data-target="#faq2">
-                    <i class="fas fa-question-circle mr-2"></i> Quanto tempo preciso dedicar por dia?
-                </div>
-                <div id="faq2" class="collapse mt-2">
-                    Recomendamos de 2 a 3 horas por dia nos primeiros 7 dias. Depois que o sistema estiver funcionando, você precisará de apenas 30-60 minutos diários para mantê-lo.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" data-toggle="collapse" data-target="#faq3">
-                    <i class="fas fa-question-circle mr-2"></i> E se eu não conseguir resultados?
-                </div>
-                <div id="faq3" class="collapse mt-2">
-                    Oferecemos suporte completo dentro da comunidade VIP para tirar todas as suas dúvidas. Além disso, você está protegido pela nossa garantia de 7 dias.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" data-toggle="collapse" data-target="#faq4">
-                    <i class="fas fa-question-circle mr-2"></i> Por quanto tempo terei acesso ao conteúdo?
-                </div>
-                <div id="faq4" class="collapse mt-2">
-                    O acesso é vitalício! Você poderá assistir as aulas quantas vezes quiser e terá direito a todas as atualizações futuras sem custo adicional.
-                </div>
-            </div>
-        </section>
-        
-        <!-- CTA Final -->
-        <section class="text-center mb-5 p-5 rounded-lg" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">
-            <h2 class="font-weight-bold mb-4">Pronto para transformar seu futuro com IA?</h2>
-            <p class="lead mb-5">Comece hoje mesmo e dê o primeiro passo para sua liberdade financeira.</p>
-            
-            <div class="price-tag mb-4">R$47,99</div>
-            <p class="text-light mb-4" style="opacity: 0.9;">ou 12x de R$4,99 no cartão</p>
-            
-            <a href="https://pay.kiwify.com.br/Sr9Ij0X" class="btn btn-accent btn-lg mb-3">
-                <i class="fas fa-arrow-right mr-2"></i> SIM, QUERO MEU ACESSO AGORA!
+            <a href="https://pay.kiwify.com.br/Sr9Ij0X" class="btn btn-primary btn-lg">
+                <i class="fas fa-bolt"></i> QUERO COMEÇAR AGORA!
             </a>
-            
-            <div class="d-flex justify-content-center align-items-center text-light" style="opacity: 0.9;">
-                <img src="https://kiwify-src.kiwify.com.br/security-badges-transparent.png" alt="Segurança" style="height: 40px;" class="mr-3">
-                <small>Compra 100% segura | Dados protegidos</small>
+        </div>
+
+        <div class="chapter-preview">
+            <h4><i class="fas fa-book-open"></i> O que você vai encontrar neste guia:</h4>
+            <p>"ISSO NÃO É CURSO – É MANUAL DE GUERRA PARA LUCRAR COM IA EM 2025. VOCÊ NÃO PRECISA SABER TUDO. VOCÊ SÓ PRECISA FAZER."</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="feature-item">
+                    <h3><i class="fas fa-check-circle text-success"></i> Método 100% Prático</h3>
+                    <p>Aprenda com um guia direto ao ponto, sem teorias complexas. Ação imediata e resultados rápidos em apenas 7 dias de execução.</p>
+                </div>
+                <div class="feature-item">
+                    <h3><i class="fas fa-tools text-primary"></i> Ferramentas Gratuitas</h3>
+                    <p>Utilize ChatGPT, Jasper, Canva Magic e ManyChat para automatizar seu processo de criação e venda, sem investimento inicial.</p>
+                </div>
+                <div class="feature-item">
+                    <h3><i class="fas fa-robot text-info"></i> Estratégias Testadas</h3>
+                    <p>Descubra as melhores estratégias para gerar tráfego e converter leads em clientes, sem investir em anúncios.</p>
+                </div>
             </div>
-        </section>
-        
-        <footer class="text-center py-4 text-muted">
-            <p>© 2025 Domínio da IA. Todos os direitos reservados.</p>
-            <small>Este produto não garante resultados financeiros. Seu sucesso depende exclusivamente do seu esforço e dedicação.</small>
-            <div class="mt-3">
-                <a href="#" class="text-muted mr-3">Termos de Uso</a>
-                <a href="#" class="text-muted mr-3">Política de Privacidade</a>
-                <a href="#" class="text-muted">Contato</a>
+            <div class="col-md-6">
+                <div class="feature-item">
+                    <h3><i class="fas fa-rocket text-danger"></i> Resultados Rápidos</h3>
+                    <p>Conquiste seus primeiros R$5k em apenas 7 dias, seguindo nosso passo a passo comprovado e executando 3 horas por dia.</p>
+                </div>
+                <div class="feature-item">
+                    <h3><i class="fas fa-gift text-warning"></i> Bônus Exclusivos <span class="badge-new">NOVO</span></h3>
+                    <p>Receba checklist para ganhar R$500 em 48h e script de vendas por áudio para acelerar ainda mais seus resultados.</p>
+                </div>
+                <div class="feature-item">
+                    <h3><i class="fas fa-users text-success"></i> Suporte e Comunidade</h3>
+                    <p>Entre para nossa comunidade exclusiva e receba suporte para tirar dúvidas e trocar ideias com outros executores.</p>
+                </div>
             </div>
+        </div>
+
+        <h2 class="text-center mt-5 mb-4"><i class="fas fa-star text-warning"></i> O Que Dizem Nossos Alunos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Eu nunca imaginei que em apenas uma semana conseguiria faturar quase R$4.000 usando só as ferramentas gratuitas indicadas no guia. O passo a passo é tão claro que não tive dúvidas!"</p>
+                    <p class="testimonial-author">- Maria, 27 anos, Recife</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="testimonial">
+                    <p class="testimonial-text">"O método do eBook é realmente diferente. Não perdi tempo planejando demais: executei cada missão diária e, no final, não só bati a meta dos R$5k, como ganhei confiança para escalar ainda mais."</p>
+                    <p class="testimonial-author">- Rafael, 25 anos, Curitiba</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="guarantee text-center">
+            <i class="fas fa-shield-alt guarantee-icon"></i>
+            <div>
+                <h4>Garantia de 7 Dias</h4>
+                <p>Se você não ficar satisfeito com o conteúdo, devolvemos seu dinheiro. Sem perguntas.</p>
+            </div>
+        </div>
+
+        <div class="text-center p-4 mt-4" style="background-color: #f1f8ff; border-radius: 10px;">
+            <h2>O Que Você Vai Aprender:</h2>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><i class="fas fa-search text-primary"></i> Dia 1</h5>
+                            <p class="card-text">Caça à Oportunidade: Encontre dores reais para resolver com IA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><i class="fas fa-cogs text-primary"></i> Dia 2</h5>
+                            <p class="card-text">Fábrica de Conteúdo: Crie posts virais com IA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><i class="fas fa-robot text-primary"></i> Dia 3</h5>
+                            <p class="card-text">Automação de Vendas: Configure seu vendedor 24h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><i class="fas fa-file-alt text-primary"></i> Dia 4</h5>
+                            <p class="card-text">Produto Rápido: Crie seu MVP com IA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><i class="fas fa-chart-line text-primary"></i> Dia 5</h5>
+                            <p class="card-text">Tráfego Orgânico: Atraia leads sem pagar anúncios</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><i class="fas fa-sync text-primary"></i> Dia 6-7</h5>
+                            <p class="card-text">Otimização e Escala: Aumente seus resultados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <h2>Ainda com dúvidas?</h2>
+            <p>Este eBook é para você que:</p>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item bg-light"><i class="fas fa-check text-success"></i> Está começando do zero e não sabe por onde começar</li>
+                <li class="list-group-item bg-light"><i class="fas fa-check text-success"></i> Já tentou ganhar dinheiro online, mas não teve resultados</li>
+                <li class="list-group-item bg-light"><i class="fas fa-check text-success"></i> Quer aproveitar o poder da IA para criar um negócio lucrativo</li>
+                <li class="list-group-item bg-light"><i class="fas fa-check text-success"></i> Precisa de um método direto, sem enrolação e com resultados rápidos</li>
+            </ul>
+            <div class="countdown">
+                <i class="fas fa-exclamation-circle"></i> Não perca tempo! Comece a executar hoje mesmo.
+            </div>
+            <a href="https://pay.kiwify.com.br/Sr9Ij0X" class="btn btn-primary btn-lg">
+                <i class="fas fa-bolt"></i> QUERO COMEÇAR AGORA!
+            </a>
+        </div>
+
+        <footer class="text-center mt-5 pt-3 border-top">
+            <p class="text-muted">
+                <small>Este eBook não garante resultados. Os resultados dependem do seu nível de dedicação e execução.</small>
+            </p>
+            <p>&copy; 2025 Domínio da IA. Todos os direitos reservados.</p>
         </footer>
+    </div>
+
+    <div class="sticky-cta text-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h5 class="mb-0">Domínio da IA: R$5k em 7 Dias</h5>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://pay.kiwify.com.br/Sr9Ij0X" class="btn btn-primary btn-sm">COMPRAR AGORA</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        // Contador regressivo
-        function updateCountdown() {
-            const now = new Date();
-            const endDate = new Date();
-            endDate.setDate(now.getDate() + 1); // Oferta termina em 24 horas
-            
-            const diff = endDate - now;
-            
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('countdown').innerHTML = `
-                ${Math.floor(hours).toString().padStart(2, '0')}:
-                ${Math.floor(minutes).toString().padStart(2, '0')}:
-                ${seconds.toString().padStart(2, '0')}
-            `;
-        }
-        
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        // Mostrar o CTA fixo quando o usuário rolar a página
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('.sticky-cta').fadeIn();
+            } else {
+                $('.sticky-cta').fadeOut();
+            }
+        });
     </script>
 </body>
 
